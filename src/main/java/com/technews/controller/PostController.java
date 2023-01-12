@@ -34,6 +34,7 @@ public class PostController {
         return postList;
     }
 
+
     @GetMapping("/api/posts/{id}")
     public Post getPost(@PathVariable Integer id) {
         Post returnPost = repository.getReferenceById(id);
@@ -42,6 +43,7 @@ public class PostController {
         return returnPost;
     }
 
+
     @PostMapping("/api/posts")
     @ResponseStatus(HttpStatus.CREATED)
     public Post addPost(@RequestBody Post post) {
@@ -49,12 +51,14 @@ public class PostController {
         return post;
     }
 
+
     @PutMapping("/api/posts/{id}")
     public Post updatePost(@PathVariable int id, @RequestBody Post post) {
         Post tempPost = repository.getReferenceById(id);
         tempPost.setTitle(post.getTitle());
         return repository.save(tempPost);
     }
+
 
     @PutMapping("/api/posts/upvote")
     public String addVote(@RequestBody Vote vote, HttpServletRequest request) {
@@ -77,6 +81,7 @@ public class PostController {
 
         return returnValue;
     }
+
 
     @DeleteMapping("/api/posts/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
