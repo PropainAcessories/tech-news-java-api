@@ -46,7 +46,7 @@
     <form action="#" th:action="@{/comments/edit}" th:object="${comment}" method="post" class="comment-form">
         <div>
             <input type="hidden" th:value="${post.id}" name="postId"/>
-            <textarea name="comment-body" th:field="*{commentText}"></textarea>
+            <textarea name="comment-body" th:field="*{commentBody}"></textarea>
         </div>
 
         <div>
@@ -55,7 +55,7 @@
     </form>
 
     <div class="comments">
-        <div th:insert="fragments/comment-fragment :: comment-fragment"></div>
+        <div th:insert="~{fragments/comment-fragment :: comment-fragment}"></div>
     </div>
 
     <div th:if="${loggedIn}">
