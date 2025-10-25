@@ -2,7 +2,7 @@ package com.technews;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+//Comment. 
 @SpringBootApplication
 public class TechNewsJavaApiApplication {
 
