@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.List;
 
+// This is an API controller.
+
 @Controller
 public class HomePageController {
     @Autowired
